@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.manage_room_lab'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.manage_room_lab"
