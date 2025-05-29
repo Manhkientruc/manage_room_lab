@@ -13,15 +13,23 @@
         android:theme="@style/Theme.Manage_room_lab"
         tools:targetApi="31">
         <activity
+            android:name=".AdminBorrowHistory"
+            android:exported="false" />
+        <activity
+            android:name=".RoomManagement"
+            android:exported="false" />
+        <activity
+            android:name=".BorrowRoom"
+            android:exported="false" />
+        <activity
+            android:name=".RoomList2"
+            android:exported="false" />
+        <activity
             android:name=".RoomList"
             android:exported="false" />
         <activity
             android:name=".ProfileAdmin"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false"
-            android:theme="@style/Theme.Manage_room_lab" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

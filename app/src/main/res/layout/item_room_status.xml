@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/item_border"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- Tên phòng -->
+    <TextView
+        android:id="@+id/roomName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="M.501"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- Icon trạng thái -->
+    <ImageView
+        android:id="@+id/statusIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_warning"/>
+
+    <!-- Text trạng thái -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đã kín lịch"
+        android:textSize="14sp"
+        android:textColor="#FFA000"/>
+</LinearLayout>

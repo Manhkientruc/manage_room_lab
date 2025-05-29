@@ -1,126 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".HomeActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!-- Header -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chào mừng bạn !"
-                android:textSize="16sp"
-                android:textColor="#888888" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cao Duy Mạnh"
-                android:textStyle="bold"
-                android:layout_marginStart="8dp"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="end"
-                android:layout_weight="1"
-                android:src="@drawable/avatar"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/circle_bg"
-                android:scaleType="centerCrop"/>
-        </LinearLayout>
-
-        <!-- Button Grid -->
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="2"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:useDefaultMargins="true">
-
-            <Button android:text="Trang cá nhân" style="@style/Widget.AppCompat.Button.Borderless"/>
-            <Button android:text="Danh sách phòng" style="@style/Widget.AppCompat.Button.Borderless"/>
-            <Button android:text="Lịch mượn" style="@style/Widget.AppCompat.Button.Borderless"/>
-            <Button android:text="Phản hồi" style="@style/Widget.AppCompat.Button.Borderless"/>
-        </GridLayout>
-
-        <!-- Đã mượn gần đây -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đã mượn gần đây"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
-
-        <!-- Danh sách các phòng -->
         <LinearLayout
             android:orientation="vertical"
+            android:padding="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Item 1 -->
+            <!-- Phần chào -->
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="12dp"
-                android:background="#AEE1F9"
-                android:layout_marginBottom="8dp"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="15\nTháng 5"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:layout_marginEnd="16dp" />
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
 
                     <TextView
+                        android:text="Chào mừng bạn !"
+                        android:textSize="14sp"
+                        android:textColor="#888888"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Phòng M.501 - Tầng 5"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_height="wrap_content" />
 
                     <TextView
+                        android:text="Cao Duy Mạnh"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tiết 2-6"
-                        android:textSize="14sp" />
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
+
+                <ImageView
+                    android:src="@drawable/avatar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_bg"
+                    android:padding="4dp" />
             </LinearLayout>
 
-            <!-- Thêm các item tương tự ở đây -->
+            <!-- Các nút chức năng -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
 
+                <!-- Nút Trang cá nhân -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_outline"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:src="@drawable/ic_person"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                    <TextView
+                        android:text="Trang cá nhân"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- Danh sách phòng -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_outline"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:src="@drawable/ic_room"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                    <TextView
+                        android:text="Danh sách phòng"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- Lịch sử mượn -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_outline"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:src="@drawable/ic_calendar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                    <TextView
+                        android:text="Lịch sử mượn"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- Phản hồi -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_outline_disabled"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:src="@drawable/ic_heart"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:tint="#999999" />
+
+                    <TextView
+                        android:text="Phản hồi"
+                        android:textSize="12sp"
+                        android:textColor="#999999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </GridLayout>
+
+            <!-- Tiêu đề danh sách mượn -->
+            <TextView
+                android:text="Đã mượn gần đây"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Thẻ mượn phòng -->
+            <!-- Thẻ 1 -->
+            <include layout="@layout/item_room_card"
+                android:id="@+id/card1" />
+
+            <!-- Thẻ 2 -->
+            <include layout="@layout/item_room_card"
+                android:id="@+id/card2" />
+
+            <!-- Thẻ 3 -->
+            <include layout="@layout/item_room_card"
+                android:id="@+id/card3" />
         </LinearLayout>
-
-    </LinearLayout>
-
 </ScrollView>

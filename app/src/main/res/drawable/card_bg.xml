@@ -1,0 +1,7 @@
+<!-- res/drawable/card_bg.xml Nền bo góc dùng cho thẻ phòng (nên đổi màu bằng code hoặc thêm biến thể)-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#E0F2FF"/> <!-- bạn có thể thay đổi theo từng loại -->
+    <corners android:radius="16dp"/>
+</shape>

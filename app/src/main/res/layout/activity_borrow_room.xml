@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Nút quay lại -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="Quay lại"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Mượn phòng"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <!-- Tên phòng -->
+    <TextView
+        android:id="@+id/roomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Phòng M.501"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <!-- Icon lịch -->
+
+    <!-- Ngày sử dụng -->
+
+    <!-- Icon đồng hồ -->
+
+    <!-- Thời gian sử dụng -->
+
+    <!-- Label mục đích -->
+
+    <TextView
+        android:id="@+id/roomDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/search_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="Chọn ngày"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/dateIcon"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <ImageView
+        android:id="@+id/dateIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintStart_toEndOf="@+id/usageLabel3"
+        app:layout_constraintTop_toBottomOf="@id/roomName" />
+
+    <TextView
+        android:id="@+id/roomTime"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/search_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="Chọn giờ"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/timeIcon"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <ImageView
+        android:id="@+id/timeIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="112dp"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintBottom_toBottomOf="@+id/usageLabel2"
+        app:layout_constraintStart_toEndOf="@+id/usageLabel2"
+        app:layout_constraintTop_toBottomOf="@+id/dateIcon"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/usageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mục đích sử dụng"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeIcon" />
+
+    <!-- Ô nhập mục đích -->
+
+    <TextView
+        android:id="@+id/usageLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Thời gian:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/usageLabel3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/usageLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ngày sử dụng:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/roomName"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <EditText
+        android:id="@+id/usageEditText"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/search_background"
+        android:gravity="top|start"
+        android:hint="Viết gì đó...."
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:padding="12dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usageLabel" />
+
+    <!-- Nút xác nhận -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00C853"
+        android:text="Xác nhận"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@id/cancelButton"
+        app:layout_constraintHorizontalWeight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usageEditText" />
+
+    <!-- Nút huỷ -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#D32F2F"
+        android:text="Huỷ"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontalWeight="1"
+        app:layout_constraintStart_toEndOf="@id/confirmButton"
+        app:layout_constraintTop_toTopOf="@id/confirmButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
