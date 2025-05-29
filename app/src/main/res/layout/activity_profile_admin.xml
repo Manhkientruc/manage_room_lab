@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="50dp"
     android:gravity="center_horizontal"
     android:background="#FFFFFF">
 
@@ -14,7 +14,8 @@
         android:layout_height="100dp"
         android:src="@drawable/avatar"
         android:scaleType="centerCrop"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/circle_bg" />
 
     <!-- Nút: Quản lý phòng máy -->
@@ -24,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:background="#EAF6FF"
+        android:background="@drawable/rounded_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="12dp">
@@ -49,7 +50,7 @@
         android:orientation="horizontal"
         android:padding="12dp"
         android:layout_marginBottom="12dp"
-        android:background="#EAF6FF"
+        android:background="@drawable/rounded_bg"
         android:gravity="center_vertical">
 
         <ImageView
@@ -73,7 +74,31 @@
         android:orientation="horizontal"
         android:padding="12dp"
         android:layout_marginBottom="24dp"
-        android:background="#EAF6FF"
+        android:background="@drawable/rounded_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            android:layout_marginEnd="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lý lịch mượn phòng"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Nút: Quản lý người dùng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_bg"
         android:gravity="center_vertical">
 
         <ImageView
@@ -98,6 +123,8 @@
         android:drawableStart="@drawable/ic_logout"
         android:drawablePadding="8dp"
         android:padding="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:text="Đăng xuất"
         android:textColor="#007BFF"
         android:textSize="16sp"
