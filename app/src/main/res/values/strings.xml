@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">manage_room_lab</string>
+    <string name="welcome">Chào mừng bạn!</string>
+    <string name="user_name">Cao Duy Mạnh</string>
+    <string name="avatar">Ảnh đại diện</string>
+    <string name="options">Tùy chọn</string>
+    <string name="recent">Đã mượn gần đây</string>
+    <string name="profile">Trang cá nhân</string>
+    <string name="room_list">Danh sách phòng</string>
+    <string name="room_empty">Phòng trống</string>
+    <string name="feedback">Phản hồi</string>
+    <string name="home">Trang chủ</string>
+    <string name="borrow">Lịch mượn</string>
+    <string name="notification">Thông báo</string>
+    <string name="setting">Cài đặt</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="txtAdminName">Đăng xuất</string>
 </resources>
