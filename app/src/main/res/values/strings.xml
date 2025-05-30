@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">manage_room_lab</string>
+<<<<<<< HEAD
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -42,4 +43,21 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+=======
+    <string name="welcome">Chào mừng bạn!</string>
+    <string name="user_name">Cao Duy Mạnh</string>
+    <string name="avatar">Ảnh đại diện</string>
+    <string name="options">Tùy chọn</string>
+    <string name="recent">Đã mượn gần đây</string>
+    <string name="profile">Trang cá nhân</string>
+    <string name="room_list">Danh sách phòng</string>
+    <string name="room_empty">Phòng trống</string>
+    <string name="feedback">Phản hồi</string>
+    <string name="home">Trang chủ</string>
+    <string name="borrow">Lịch mượn</string>
+    <string name="notification">Thông báo</string>
+    <string name="setting">Cài đặt</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="txtAdminName">Đăng xuất</string>
+>>>>>>> 55f2e5765a523a4d4adb8f413e8ab99759e16812
 </resources>

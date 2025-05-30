@@ -1,50 +1,31 @@
 package com.example.manage_room_lab;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.*;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class ForgotPasswordActivity extends AppCompatActivity {
-
-    private EditText editTextMobile;
-    private Button btnGetOtp;
-
-    private DatabaseHelper dbHelper;
+public class ForgotPasswordActivity extends Activity {
+    EditText edtPhoneForgot;
+    Button btnSendCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgotpassword);
+        setContentView(R.layout.activity_forgot_password);
 
-        // Khởi tạo DatabaseHelper
-        dbHelper = new DatabaseHelper(this);
+        edtPhoneForgot = findViewById(R.id.edtPhoneForgot);
+        btnSendCode = findViewById(R.id.btnSendCode);
 
-        // Ánh xạ view
-        editTextMobile = findViewById(R.id.mobile);
-        btnGetOtp = findViewById(R.id.loginButton);
-
-        btnGetOtp.setOnClickListener(v -> {
-            String mobile = editTextMobile.getText().toString().trim();
-
-            if (mobile.isEmpty()) {
-                Toast.makeText(ForgotPasswordActivity.this, "Vui lòng nhập số điện thoại", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            // Kiểm tra số điện thoại đã đăng ký chưa
-            boolean exists = dbHelper.checkMobileExist(mobile);
-            if (exists) {
-                // TODO: Gửi mã OTP đến số điện thoại (chưa triển khai)
-                Toast.makeText(ForgotPasswordActivity.this, "Đã gửi mã OTP đến số: " + mobile, Toast.LENGTH_SHORT).show();
-
-                // Có thể chuyển sang màn hình nhập OTP nếu có
-                // startActivity(new Intent(ForgotPasswordActivity.this, OtpVerificationActivity.class));
-            } else {
-                Toast.makeText(ForgotPasswordActivity.this, "Số điện thoại chưa được đăng ký", Toast.LENGTH_SHORT).show();
-            }
+        btnSendCode.setOnClickListener(v -> {
+            // Sau này bạn sẽ xử lý gửi mã OTP ở đây
+            showOtpDialog();
         });
+    }
+
+    private void showOtpDialog() {
+        Dialog dialog = new OtpDialog(this);
+        dialog.show();
     }
 }
