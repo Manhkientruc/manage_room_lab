@@ -1,148 +1,149 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Phần chào -->
         <LinearLayout
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
-            <!-- Phần chào -->
             <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:text="Chào mừng bạn !"
+                    android:textSize="14sp"
+                    android:textColor="#888888"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-                    <TextView
-                        android:text="Chào mừng bạn !"
-                        android:textSize="14sp"
-                        android:textColor="#888888"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="Cao Duy Mạnh"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <ImageView
-                    android:src="@drawable/avatar"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/circle_bg"
-                    android:padding="4dp" />
+                <TextView
+                    android:text="Cao Duy Mạnh"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <!-- Các nút chức năng -->
-            <GridLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:src="@drawable/ic_avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop" />
+            <!--                    android:background="@drawable/circle_bg"-->
+            <!--                    android:padding="4dp" -->
+        </LinearLayout>
+
+        <!-- Các nút chức năng -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true">
+
+            <!-- Nút Trang cá nhân -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="10dp"
+                android:layout_columnWeight="1"
                 android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:rowCount="2"
-                android:alignmentMode="alignMargins"
-                android:useDefaultMargins="true">
+                android:background="@drawable/button_outline"
+                android:padding="16dp">
 
-                <!-- Nút Trang cá nhân -->
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_columnWeight="1"
+                <ImageView
+                    android:src="@drawable/ic_person"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:text="Trang cá nhân"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Danh sách phòng -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="10dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_outline"
+                android:padding="16dp">
+
+                <ImageView
+                    android:src="@drawable/ic_room1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_outline"
-                    android:padding="16dp">
+                    android:text="Danh sách phòng"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-                    <ImageView
-                        android:src="@drawable/ic_person"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp" />
+            <!-- Lịch sử mượn -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_outline"
+                android:padding="16dp">
 
-                    <TextView
-                        android:text="Trang cá nhân"
-                        android:textSize="12sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                <ImageView
+                    android:src="@drawable/ic_calendar"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp" />
 
-                <!-- Danh sách phòng -->
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_columnWeight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_outline"
-                    android:padding="16dp">
+                <TextView
+                    android:text="Lịch sử mượn"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-                    <ImageView
-                        android:src="@drawable/ic_room"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp" />
+            <!-- Phản hồi -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_outline"
+                android:padding="16dp">
 
-                    <TextView
-                        android:text="Danh sách phòng"
-                        android:textSize="12sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <!-- Lịch sử mượn -->
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_columnWeight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_outline"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:src="@drawable/ic_calendar"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp" />
-
-                    <TextView
-                        android:text="Lịch sử mượn"
-                        android:textSize="12sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-
-                <!-- Phản hồi -->
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_columnWeight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_outline_disabled"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:src="@drawable/ic_heart"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:tint="#999999" />
+                <ImageView
+                    android:src="@drawable/ic_heart"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:tint="#ff0202" />
 
                     <TextView
                         android:text="Phản hồi"
                         android:textSize="12sp"
-                        android:textColor="#999999"
+                        android:textColor="#FF000000"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>

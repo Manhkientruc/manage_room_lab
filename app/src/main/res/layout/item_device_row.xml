@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#fff"
+    android:padding="6dp"
+    android:gravity="center_vertical">
+
+    <!-- Tên thiết bị -->
+    <TextView
+        android:id="@+id/tvDeviceName"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="Máy tính 1"
+        android:textSize="15sp" />
+
+    <!-- Tình trạng -->
+    <TextView
+        android:id="@+id/tvDeviceStatus"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Đang hỏng"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:background="@drawable/status_bg_red"
+        android:textColor="#fff"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginEnd="4dp" />
+
+    <!-- Nút sửa -->
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:tint="#222"
+        android:layout_gravity="center" />
+</LinearLayout>
